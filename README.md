@@ -1,2 +1,2 @@
-# team
-A place to store internal information for the Tech Outreach team
+# Hyland Tech Outreach Team
+This is a place to store information for the Tech Outreach team.
