@@ -76,6 +76,7 @@ _An Instructor-led, hands-on activity that should engage students_
 - The instructor should ask the students how to proceed during these activities
 - These are often code-along activities, where students write the same code as the instructor (possibly with some customization)
 - These can also be more general follow-along activities
+- It is often beneficial to include screenshots within the instructions
 
 #### Examples
 - [Here](https://hytechcamps.github.io/python/TurtleCodeAlong.html) is an example of a code-along from the Python Hy-Tech Camp. Note that code is available with each step, and the final code is provided at the end.
@@ -101,16 +102,59 @@ _A way to end the session_
 - If there are any important closing remarks, they should be given here
 
 ## Technical Details
+In addition to the actual content of the curriculum, there are several implementation details that are important to note. This section covers the storage and deployment of the curriculum for Tech Outreach programs.
 
 ### GitHub
+All content for Tech Outreach programs should be stored on [GitHub](https://github.com/). There is a [**hylandtechoutreach**](https://github.com/hylandtechoutreach/) account that owns each repository, in addition to the [**hytechclub**](https://github.com/hytechclub/) organization and the [**hytechcamps**](https://github.com/hytechcamps/) organization.
+
+GitHub uses Git to allow the Tech Outreach team to store all material in a standard, accessible way. Curriculum developers can use version control to keep track of all updates and changes, as well as collaborate on programs.
+
+In general, the content visible directly within GitHub repositories is designed to be instructor-facing. Student-facing content is surfaced through GitBooks. Note that the content on GitHub is still open-source (e.g., not private or secure); it is simply not shown directly to students.
+
+There is an [Intro to Git](https://hylandtechoutreach.github.io/hackathon/IntroToGit/StudentDesc.html) workshop that may be helpful for beginners.
 
 ### Markdown
+Lesson plans, follow-along instructions, landing pages, and more are written using [Markdown](https://en.wikipedia.org/wiki/Markdown). This has a number of advantages - one of the most important is that it is easy to render Markdown pages in a nice web format (both on GitHub and through GitBooks), and it is easy to track and review changes.
 
-#### Assets Folder
+[This Markdown tutorial](https://www.markdowntutorial.com/) is a great place to start learning Markdown. Markdown files end with **.md**. They can be edited and previewed in VS Code, or directly on the web through GitHub. Editing them is somewhere in between editing a Google Doc and writing an HTML file (markdown actually does support most HTML elements). It can take some time to become accustomed to it, but it is a very helpful tool.
 
 #### Style Guide
+There is not currently a specific style guide for Markdown files. However, there should be one! For now, other repositories are a good point of reference for stylistic choices.
+
+A few things to note:
+
+##### Assets Folder for Images
+When adding images to markdown files, the images should be placed in a folder in the repository named **Assets**. They can be accessed like so:
+
+```md
+![alt text](Assets/ImagePath.md)
+```
+
+##### Embedded PowerPoints/Videos
+Use HTML `<iframe>` elements to embed PowerPoints or YouTube videos. A `width` of `"100%"` and a `height` of `"450px"` tend to work well. For PowerPoints, it is possible to embed them using [Microsoft Office online](https://office.com). After a PowerPoint has been published via GitHub Pages, it will be available for embed online. There is a special URL where the path to the PowerPoint will be used; the `src` _within_ the URL (not the `src` of the `iframe`) should match the location where the PowerPoint is surfaced. It may be necessary to change the base URL depending on which organization holds the repository, and from there, it will be a matter of filling in the correct path to the PowerPoint. It should end up looking something like this:
+
+```html
+<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://hytechcamps.github.io/blockchain/Blockchain.pptx' width='100%' height='450px' frameborder='0'></iframe>
+```
+
+For general purposes, this block of code can be copied and modified with the new URL.
 
 ### GitBook
+All student-facing content is surfaced via [GitBook](https://github.com/GitbookIO/gitbook). GitBooks make it possible to view markdown-driven material in an easily-accessible web format. The integration with the actual GitHub content should be fairly seamless at this point, but it may be useful to understand how the process works.
+
+#### GitBook CLI Tool
+Although the [GitBook CLI tool](https://www.npmjs.com/package/gitbook-cli) is deprecated, it still seems to work pretty well for Tech Outreach purposes. This is a command line tool that takes the contents of a folder and builds/serves a GitBook from them. This tool comes in handy in cases where it is desired to check what something will look like when it is published without actually publishing it.
+
+#### GitHub Action
+There is a [GitHub Action](https://github.com/features/actions) set to run each time the repository has a push. This action is defined in a specific file in a specific folder: **.github/workflows/BuildGitBook.yml**. The specific name of the file can change, but the folder structure and filetype are very important. This action uses the GitBook CLI tool to build a new GitBook, and store the code for it on the `gh-pages` branch of the repository.
+
+#### GitHub Pages
+[GitHub Pages](https://pages.github.com/) is a simple way to publish websites based on the contents of GitHub repositories. In this case, the `gh-pages` branch contains all of the code for the website to be published. For a new repository, it will be necessary to turn on GitHub pages and make sure it is built from the proper branch:
+
+![](Assets/GhPagesBranch.png)
+
+#### Example
+[Here](https://hylandtechoutreach.github.io/peeke-2022/) is an example of a published GitBook. All of it is built from the content in [this repository](https://github.com/hylandtechoutreach/peeke-2022).
 
 ## Considerations
 
