@@ -107,6 +107,8 @@ In addition to the actual content of the curriculum, there are several implement
 ### GitHub
 All content for Tech Outreach programs should be stored on [GitHub](https://github.com/). There is a [**hylandtechoutreach**](https://github.com/hylandtechoutreach/) account that owns each repository, in addition to the [**hytechclub**](https://github.com/hytechclub/) organization and the [**hytechcamps**](https://github.com/hytechcamps/) organization.
 
+Curriculum developers should have their own Hyland GitHub accounts to contribute to projects as well.
+
 GitHub uses Git to allow the Tech Outreach team to store all material in a standard, accessible way. Curriculum developers can use version control to keep track of all updates and changes, as well as collaborate on programs.
 
 In general, the content visible directly within GitHub repositories is designed to be instructor-facing. Student-facing content is surfaced through GitBooks. Note that the content on GitHub is still open-source (e.g., not private or secure); it is simply not shown directly to students.
@@ -191,12 +193,55 @@ instead of this:
 Curriculum should be designed in such a way that anyone can teach it. This is especially true with Tech Outreach, because instructors are recruited from a variety of areas and have a vast range of different skills. In some instances, Tech Outreach curriculum has even been used by external organizations. It is crucial to consider all of those future instructors. Curriculum should assume no prior knowledge; any instructor should be able to read through the lesson plan and understand the concepts enough to teach them. Instructions for activities should be as clear and detailed as possible, with in-depth explanations when necessary. Theoretically, anyone should be able to learn one of these topics simply by reading through the curriculum itself and completing the activities.
 
 #### Videos and Scripts
-To that end, it can be extremely helpful to include videos and scripts. Typically, a video is recorded for both the lecture and the follow-along activity. This allows future instructors (or even future students) to see someone bring these materials to life. The videos should be student-facing in nature, although it may also be helpful to include important instructor-facing notes in another form.
+To that end, it can be extremely helpful to include videos and scripts. Typically, a video is recorded for both the lecture and the follow-along activity. This allows future instructors (or even future students) to see someone bring these materials to life. The videos should be student-facing in nature, although it may also be helpful to include important instructor-facing notes in another form. Videos can be created via Zoom - or, via Camtasia if a license is obtained.
 
 It may be helpful to write a line-by-line script for the presentation. This will allow anyone who can read to present the material. It should not be necessary to include a script for the follow-along; the actual instructions themselves should essentially act as a script in this case.
 
 ## Actually Developing Curriculum
+Now that all of that has been covered, here are the basic steps to follow when developing something.
 
-### Creating Something New
+### 1. Starting from the Template
+There is a [GitHub Template Repository](https://github.com/hylandtechoutreach/book-template) that can be used to begin. It contains the basic setup to create a GitBook-publishing flow, along with some basic structure. [This page](https://github.com/hylandtechoutreach/book-template/blob/main/BOOKTEMPLATEREADME.md) discusses the process more in-depth.
+
+Each new GitHub Repository for Tech Outreach curriculum should be created by the `hylandtechoutreach` account, in the proper organization. Members of the Tech Outreach team will be able to access this account directly.
+
+Once the repository has been created based on the template, it should be cloned locally and developed there. [Visual Studio Code](https://code.visualstudio.com/) provides one way to do this. It may be helpful to create a **Planning** folder and a markdown file or two to begin the planning phase of development. For example, establishing the goal(s) based on the specific program could happen in a **Planning/Notes.md** file. Once the repository is created and cloned, it will be necessary to figure out the goal for the lesson(s).
+
+### 2. Determining the Goal(s)
+Each new piece of curriculum should be tied to some Tech Outreach program. This could be a Hy-Tech Camp, a Hackathon workshop, a Hy-Tech Club semester-long course, or something totally new. That program will have some sort of goal - perhaps to grow the skills of the students in a certain area, perhaps to build excitement around a certain topic, perhaps to simply expose students to a certain concept. All curriculum should ultimately adhere to the goal of the program for which it exists.
+
+From this goal, a set of learning objectives should be established. One format is [S.W.B.A.T.](https://www.feedbackpanda.com/learning-goals/) (**S**tudents **W**ill **B**e **A**ble **T**o) - this is generally good, but Tech Outreach programs can differ significantly from traditional classroom education. Regardless of format, there should be a set of goals for the students, such as "students will be able to define blockchain" or "students will be able to change the color of their background screen" or even "students will have fun playing with a pixel art tool." These will help guide the creation of the lesson, and should be listed in the lesson plan. For a multi-session program, each session should have its own set of goals.
+
+>Note: the current Tech Outreach Curriculum Development Team (i.e., Joseph (i.e., the one writing this)) currently does not do a good job of this - but hopes to do better in the future!
+
+### 3. Outline the Session(s)
+>Note: after the objectives have been established, there can be many routes to completing the curriculum - this goes through just one possible path!
+
+The next step is to outline the session(s). The "Typical Lesson Flow" can be used as a template, but not all pieces of this are always required. The important thing is to try to plan out which pieces _are_ required, and how they will be executed. Use the objectives to guide the selection of activities.
+
+This outline should be detailed in a **README.md** file - this is generally the main "Lesson Plan" document from which all else flows.
+
+### 4. Fill Out the Outline(s)
+Once the outline has been created, each individual part of the lesson can be completed. Typically it is helpful to split up each part, and possibly have different people work on different parts of the plan. However, it is important that they all flow together - for example, the formative assessment should be based on the lecture, and the follow-along can assume knowledge of the material covered by the previous parts of the lesson.
+
+Refer to the "Typical Lesson Flow" section for tips and guidelines around each specific part.
+
+### 5. Review / Mock Session
+After the outline has been filled out and the curriculum is in a "complete" state, it is important for others to review it. There should certainly be some form of feedback built into the steps above as well, but this is a chance to see the whole lesson (or set of lessons) in action.
+
+Members of the Tech Outreach team can take a look at the actual lesson plan and activities, and provide feedback or offer suggestions. This can be asynchronous, or in a more in-depth review meeting. In addition to those options, a "Mock Session" can be held. This is a great opportunity to see the material in action, work out the timing, and make adjustments as needed. Ideally, each new lesson would have a mock session - however, this is not always possible.
+
+### 6. Preparing Others
+After all necessary changes have been made and the curriculum is done, it will be necessary to prepare others to teach it. This is the time to create videos and scripts, and share the content with those who will be teaching it.
 
 ### Contributing to an Existing Project
+If it is desired to contribute to a repository that already exists, the steps will mostly be the same; the important distinction is that a fork/pull request should be used.
+
+Start by creating a fork of the existing repository with an account other than `hylandtechoutreach`. Make changes in the fork of the repository (on the `main` branch), and submit a Pull Request. Members of the Tech Outreach team will review the pull request, and accept it if it is deemed acceptable.
+
+## Next Steps
+Hopefully this guide is comprehensive enough to prepare anyone with sufficient background knowledge to start contributing to Tech Outreach curriculum!
+
+- To reach the Tech Outreach team with any questions, email [techoutreach@hyland.com](mailto:techoutreach@hyland.com)
+- To reach out to the original author of this document, contact [Joseph Maxwell](mailto:joseph.maxwell@hyland.com)
+- To make changes to this document, follow the steps above and create a Pull Request 😁
