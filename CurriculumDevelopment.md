@@ -1,4 +1,4 @@
-# Curriculum Development Programs & Procedures
+# Curriculum Development Procedures
 This page contains information about contributing to the Tech Outreach curriculum.
 
 ## Examples
@@ -157,14 +157,43 @@ There is a [GitHub Action](https://github.com/features/actions) set to run each 
 [Here](https://hylandtechoutreach.github.io/peeke-2022/) is an example of a published GitBook. All of it is built from the content in [this repository](https://github.com/hylandtechoutreach/peeke-2022).
 
 ## Considerations
+When developing new curriculum, there are a few important things to keep in mind.
 
 ### Hybrid Accessibility
+Since CoViD-19, many Tech Outreach programs have had a virtual aspect. In general, it is best to prepare curriculum in such a way that it would be offerable in an in-person, virtual, _or_ hybrid format. Always make sure virtual students can be included in all activities, and there are mechanisms in place for incorporating both types of experience into a session. This could be designed out-of-the-box, or there could be alternatives for some activities.
 
 ### Replit / Online IDEs
+One thing that helps a lot with the hybrid format (and a lot of other things) is [Replit](https://replit.com/). Replit is an online IDE that supports a large number of languages (including HTML/CSS/JS, C#, NodeJS, and Python). It makes it quite easy to share code projects. Instructors can share starter code with students, and students can access their code from anywhere. Replit also has a feature called [Mulitplayer](https://replit.com/site/multiplayer), which allows for simultaneous editing and live chat. This can help students collaborate, and can also allow instructors to assist students virtually in a fairly simple way.
+
+As IDEs go, Replit is far from perfect. It is not always the most reliable, and often requires reloading. They also update it fairly often, which is a double-edged sword; it is nice to have new features, but it often requires re-learning (and re-teaching). All that said, Replit is the best solution the Tech Outreach team has found for dealing with code management across clubs, camps, and other programs.
+
+There may be other online IDEs that make more sense for certain projects, or perhaps for the future of all programs - but for now, Replit is the way to go.
 
 ### Reusability
+When designing curriculum for a specific program, it is important to consider reusability. Ideally, all curriculum would be modular enough to plug into any event or program with just a few tweaks. However, quality should _not_ be sacrificed in favor of reusability. Sometimes, specific programs require specific solutions. There are no well-defined guidelines for dealing with this question, but it is necessary to think about it. When possible and easy, create material that could be leveraged in many situations. Otherwise, focus solely on the success of the program itself.
 
-### Videos and Scripts
+#### Example
+When defining a schedule/agenda for a session, use duration instead of timestamps. Use something like this:
+
+| Activity | Time |
+|-|-|
+| Warm-Up | 15m |
+| Code-Along | 45m |
+
+instead of this:
+
+| Activity | Time |
+|-|-|
+| Warm-Up | 10:00-10:15 |
+| Code-Along | 10:15-11:00 |
+
+### Other Instructors
+Curriculum should be designed in such a way that anyone can teach it. This is especially true with Tech Outreach, because instructors are recruited from a variety of areas and have a vast range of different skills. In some instances, Tech Outreach curriculum has even been used by external organizations. It is crucial to consider all of those future instructors. Curriculum should assume no prior knowledge; any instructor should be able to read through the lesson plan and understand the concepts enough to teach them. Instructions for activities should be as clear and detailed as possible, with in-depth explanations when necessary. Theoretically, anyone should be able to learn one of these topics simply by reading through the curriculum itself and completing the activities.
+
+#### Videos and Scripts
+To that end, it can be extremely helpful to include videos and scripts. Typically, a video is recorded for both the lecture and the follow-along activity. This allows future instructors (or even future students) to see someone bring these materials to life. The videos should be student-facing in nature, although it may also be helpful to include important instructor-facing notes in another form.
+
+It may be helpful to write a line-by-line script for the presentation. This will allow anyone who can read to present the material. It should not be necessary to include a script for the follow-along; the actual instructions themselves should essentially act as a script in this case.
 
 ## Actually Developing Curriculum
 
