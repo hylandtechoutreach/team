@@ -171,6 +171,9 @@ As IDEs go, Replit is far from perfect. It is not always the most reliable, and 
 
 There may be other online IDEs that make more sense for certain projects, or perhaps for the future of all programs - but for now, Replit is the way to go.
 
+#### Using Repl Projects
+When creating a Repl project for a lesson, use the [@HylandOutreach](https://replit.com/@HylandOutreach/) account.
+
 ### Reusability
 When designing curriculum for a specific program, it is important to consider reusability. Ideally, all curriculum would be modular enough to plug into any event or program with just a few tweaks. However, quality should _not_ be sacrificed in favor of reusability. Sometimes, specific programs require specific solutions. There are no well-defined guidelines for dealing with this question, but it is necessary to think about it. When possible and easy, create material that could be leveraged in many situations. Otherwise, focus solely on the success of the program itself.
 
